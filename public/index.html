@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Public Repo README Generator</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>⚡ README Generator</h1>
+      <p class="subtitle">Instantly create beautiful READMEs from any public GitHub repo</p>
+    </header>
+
+    <form id="form" class="card glass">
+      <label for="repoUrl" class="input-label">Repository URL</label>
+      <div class="input-group">
+        <input id="repoUrl" type="url" placeholder="https://github.com/owner/repo" required />
+        <button type="submit" class="btn primary">Generate</button>
+      </div>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <section class="actions">
+      <button id="copyBtn" class="btn secondary" disabled>📋 Copy</button>
+      <button id="downloadBtn" class="btn secondary" disabled>⬇ Download</button>
+    </section>
+
+    <section class="output-section card glass">
+      <label for="output" class="input-label">Generated README</label>
+      <textarea id="output" rows="16" placeholder="Your README will appear here..."></textarea>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
